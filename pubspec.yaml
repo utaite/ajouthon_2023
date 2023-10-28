@@ -15,7 +15,9 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_hooks: ^0.20.3
-  geolocator: ^10.1.0
+  firebase_core: 2.15.0
+  firebase_messaging: 14.6.5
+  flutter_local_notifications: ^16.1.0
   get: ^4.6.6
   google_maps_flutter: ^2.5.0
   http: ^1.1.0
@@ -25,6 +27,7 @@ dependencies:
   url_launcher: ^6.2.1
 
 dev_dependencies:
+  firebase_core_platform_interface: 4.8.0
   flutter_lints: ^3.0.0
   flutter_test:
     sdk: flutter

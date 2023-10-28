@@ -20,10 +20,10 @@ class MainPage extends GetView<MainPageController> {
             (state) => GoogleMap(
               initialCameraPosition: const CameraPosition(
                 target: LatLng(37.2843727, 127.0443767),
-                zoom: 16,
+                zoom: 17,
               ),
               markers: state.markers,
-              myLocationButtonEnabled: false,
+              myLocationEnabled: true,
             ),
           ),
         ),
