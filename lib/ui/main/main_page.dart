@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 import '../../module/module.dart';
 import 'main_page_controller.dart';
@@ -16,19 +17,13 @@ class MainPage extends GetView<MainPageController> {
       child: Scaffold(
         body: SafeArea(
           child: controller.rx(
-            (state) => CustomScrollView(
-              slivers: [
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    UI.spacer,
-                    Center(
-                      child: Text('Hello, World!'),
-                    ),
-                    UI.spacer,
-                  ],
-                ).sliverFill,
-              ],
+            (state) => GoogleMap(
+              initialCameraPosition: const CameraPosition(
+                target: LatLng(37.2843727, 127.0443767),
+                zoom: 16,
+              ),
+              markers: state.markers,
+              myLocationButtonEnabled: false,
             ),
           ),
         ),

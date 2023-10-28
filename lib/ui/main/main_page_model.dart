@@ -1,16 +1,18 @@
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
 import '../../module/module.dart';
 
 class MainPageModel extends GetModel {
   const MainPageModel({
-    required this.id,
+    required this.markers,
   });
 
   factory MainPageModel.empty() => _empty;
 
-  final int id;
+  final Set<Marker> markers;
 
   static const MainPageModel _empty = MainPageModel(
-    id: 0,
+    markers: {},
   );
 
   @override
@@ -18,15 +20,15 @@ class MainPageModel extends GetModel {
 
   @override
   MainPageModel copyWith({
-    int? id,
+    Set<Marker>? markers,
   }) =>
       MainPageModel(
-        id: id ?? this.id,
+        markers: markers ?? this.markers,
       );
 
   @override
-  List<Object?> get props => [id];
+  List<Object?> get props => [markers];
 
   @override
-  String toString() => 'id: $id';
+  String toString() => 'markers: $markers';
 }

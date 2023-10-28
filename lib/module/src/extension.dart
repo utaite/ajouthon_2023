@@ -4,9 +4,7 @@ import 'package:get/get.dart';
 
 import '../../model/route/route_model.dart';
 import '../getx/src/get_rx_impl.dart' as getx;
-import 'colors.dart';
-import 'routes.dart';
-import 'util.dart';
+import '../module.dart' hide Rx, RxList;
 
 typedef WidgetFunc = Widget Function();
 
@@ -35,6 +33,8 @@ extension DateTimeOptionalEx on DateTime? {
 }
 
 extension DateTimeEx on DateTime {
+  String get dateAndTime => '$year-${'$month'.padLeft(2, '0')}-${'$day'.padLeft(2, '0')} ${'$hour'.padLeft(2, '0')}:${'$minute'.padLeft(2, '0')}';
+
   DateTime get midnight => DateTime(year, month, day);
 
   Duration compareDuration(DateTime other) {
@@ -201,6 +201,7 @@ extension ThemeDataEx on ThemeData {
     const primaryColor = colorPrimary;
 
     return ThemeData(
+      fontFamily: 'SUIT',
       primarySwatch: Colors.blue,
       colorScheme: (brightness.isDark ? const ColorScheme.dark() : const ColorScheme.light()).copyWith(
         primary: primaryColor,
@@ -209,6 +210,18 @@ extension ThemeDataEx on ThemeData {
         onSecondary: primaryColor,
       ),
       primaryColor: primaryColor,
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          backgroundColor: colorPrimary,
+          foregroundColor: Colors.white,
+          padding: Paddings.paddingAll16,
+          shape: const RoundedRectangleBorder(),
+          textStyle: textTheme.titleLarge?.copyWith(
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
     );
   }
 }

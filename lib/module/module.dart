@@ -2,6 +2,7 @@ export 'getx/getx.dart';
 export 'src/api.dart';
 export 'src/colors.dart';
 export 'src/extension.dart';
+export 'src/paddings.dart';
 export 'src/pref_helper.dart';
 export 'src/routes.dart';
 export 'src/styles.dart';
