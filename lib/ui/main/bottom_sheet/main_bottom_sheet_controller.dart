@@ -1,11 +1,11 @@
 import 'package:url_launcher/url_launcher.dart';
 
+import '../../../model/program/program_model.dart';
 import '../../../module/module.dart';
-import 'main_bottom_sheet_model.dart';
 
-class MainBottomSheetController extends GetController<MainBottomSheetModel> {
+class MainBottomSheetController extends GetController<ProgramModel> {
   MainBottomSheetController({
-    required MainBottomSheetModel model,
+    required ProgramModel model,
   }) : super(model);
 
   final Rx<int> index = 0.obs;
@@ -16,8 +16,9 @@ class MainBottomSheetController extends GetController<MainBottomSheetModel> {
     super.onClose();
   }
 
-  void onChangedPage(int index) {
-    this.index.value = index;
+  // ignore: use_setters_to_change_properties
+  void onChangedPage(int i) {
+    index.value = i;
   }
 
   void onPressedClose() {
