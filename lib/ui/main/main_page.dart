@@ -25,7 +25,6 @@ class MainPage extends GetView<MainPageController> {
                     Center(
                       child: Text('Hello, World!'),
                     ),
-                    UI.spacer,
                   ],
                 ).sliverFill,
               ],

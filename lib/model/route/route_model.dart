@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../module/module.dart';
 
@@ -13,6 +14,7 @@ class RouteModel extends GetModel {
   factory RouteModel.empty() => _empty;
 
   factory RouteModel.main() => _main;
+  factory RouteModel.keyword() => _keyword;
 
   final int navigatorId;
   final Routes routes;
@@ -29,6 +31,11 @@ class RouteModel extends GetModel {
   static final RouteModel _main = _empty.copyWith(
     navigatorId: randomInt,
     routes: Routes.main,
+  );
+
+  static final RouteModel _keyword = _empty.copyWith(
+    navigatorId: randomInt,
+    routes: Routes.keyword,
   );
 
   @override
