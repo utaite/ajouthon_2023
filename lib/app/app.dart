@@ -28,7 +28,7 @@ class App extends GetView<AppController> {
       return GetMaterialApp(
         title: '아주톤 2023',
         debugShowCheckedModeBanner: false,
-        initialRoute: RouteModel.main().routes.name,
+        initialRoute: RouteModel.keyword().routes.name,
         getPages: pages,
         unknownRoute: pages.firstOrNull,
         themeMode: state.brightness.themeMode,
