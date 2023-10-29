@@ -32,6 +32,15 @@ class RepositoryHelper extends GetConnect {
         decoder: KeywordTextModel.fromJson,
       );
 
+  Future<Response<String>> getPush(String deviceToken) => request(
+        '${[Url.api, Url.push].join('/')}?deviceToken=$deviceToken',
+        'GET',
+        decoder: (json) {
+          print('json: $json');
+          return json.toString();
+        },
+      );
+
   /// POST
   Future<Response<String>> postUserKeywords(String deviceToken, String keywordTexts) => post(
         [Url.api, Url.user, Url.keywords].join('/'),

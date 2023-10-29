@@ -44,11 +44,15 @@ class MainPageController extends GetController<MainPageModel> {
       ),
     ];
     final markers = await Future.wait(labelMarkers.map(toMarker));
-
     change(
       state.copyWith(
         markers: markers.toSet(),
       ),
+    );
+
+    await Future.delayed(Values.seconds * 10);
+    await repository.push(
+      deviceToken: (await FirebaseMessaging.instance.getToken()).elvis,
     );
   }
 

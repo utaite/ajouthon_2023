@@ -3,6 +3,7 @@ final class Url {
   static const String api = 'http://172.21.37.202:3000';
 
   static const String popular = 'popular';
+  static const String push = 'push';
   static const String user = 'user';
 
   static const String alerts = 'alerts';

@@ -197,7 +197,7 @@ class ProgramModel extends GetModel {
     place: '성호관 앞 잔디밭',
     latitude: 37.2827929,
     longitude: 127.0452487,
-    url: 'https://www.instagram.com/p/Cq1a9a9P39-',
+    url: 'https://www.instagram.com/p/CqpX97dvq9Z',
   );
 
   static final ProgramModel _dummy11 = _empty.copyWith(

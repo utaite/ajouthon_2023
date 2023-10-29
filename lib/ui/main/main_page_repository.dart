@@ -26,4 +26,12 @@ class MainPageRepository extends RepositoryHelper {
 
     return KeywordTextModel.dummy();
   }
+
+  Future<String> push({required String deviceToken}) async {
+    final response = await super.getPush(deviceToken);
+    final body = response.body;
+    Get.log('getKeywords: $body');
+
+    return '';
+  }
 }

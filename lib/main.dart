@@ -90,6 +90,7 @@ void main(List<String> args) async {
     await setupFlutterNotifications();
   }
   WidgetsFlutterBinding.ensureInitialized();
+  await clear();
 
   Get.put<AppController>(
     AppController(
