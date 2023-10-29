@@ -1,16 +1,7 @@
-# ajouthon_2023
+키워드 기반 개인화 커뮤니티 구독 서비스 [팀프로젝트]
+=
+#### 아주대학교 2023-2 해커톤(아주톤) 1조
 
-A new Flutter project.
+- 개발 기간 : 2023.10.28 ~ 2023.10.29
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 사용 기술 : Flutter, GetX, Google Map, FCM
