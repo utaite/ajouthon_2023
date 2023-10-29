@@ -15,4 +15,11 @@ final class UI {
   static const BorderRadius borderRadiusSmall = BorderRadius.all(radiusSmall);
   static const BorderRadius borderRadiusExtraSmall = BorderRadius.all(radiusExtraSmall);
   static const BorderRadius borderRadiusCircle = BorderRadius.all(radiusCircle);
+
+  static const BorderRadius borderRadiusTop = BorderRadius.only(topLeft: radius, topRight: radius);
+
+  static const Map<String, Color> colors = {
+    '개발': Colors.deepPurple,
+    '행사': colorPrimary,
+  };
 }

@@ -7,10 +7,11 @@ class KeywordPageController extends GetController<KeywordPageModel> {
   }) : super(model);
 
   void onChangedText(String text) {
-    change(state.copyWith(
-      text: text,
-    ));
-    print(state);
+    change(
+      state.copyWith(
+        text: text,
+      ),
+    );
   }
 
   void onPressedButton() {

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "432753470502",
+    "project_id": "ajouthon-2023",
+    "storage_bucket": "ajouthon-2023.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:432753470502:android:98396bf1e649cd8e800ae7",
+        "android_client_info": {
+          "package_name": "com.utaite.ajouthon.ajouthon_2023"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDttco1bb2vPKR0AxLyXvritOq7vsmNNow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
