@@ -1,24 +1,16 @@
-import 'package:flutter/material.dart';
-
 import '../module/module.dart';
 
 class AppModel extends GetModel {
   const AppModel({
-    required this.brightness,
-    required this.accessToken,
-    required this.refreshToken,
+    required this.keywords,
   });
 
   factory AppModel.empty() => _empty;
 
-  final Brightness brightness;
-  final String accessToken;
-  final String refreshToken;
+  final Iterable<String> keywords;
 
   static const AppModel _empty = AppModel(
-    brightness: Brightness.light,
-    accessToken: '',
-    refreshToken: '',
+    keywords: Iterable.empty(),
   );
 
   @override
@@ -26,19 +18,15 @@ class AppModel extends GetModel {
 
   @override
   AppModel copyWith({
-    Brightness? brightness,
-    String? accessToken,
-    String? refreshToken,
+    Iterable<String>? keywords,
   }) =>
       AppModel(
-        brightness: brightness ?? this.brightness,
-        accessToken: accessToken ?? this.accessToken,
-        refreshToken: refreshToken ?? this.refreshToken,
+        keywords: keywords ?? this.keywords,
       );
 
   @override
-  List<Object?> get props => [brightness, accessToken, refreshToken];
+  List<Object?> get props => [keywords];
 
   @override
-  String toString() => 'brightness: $brightness accessToken: $accessToken refreshToken: $refreshToken';
+  String toString() => 'keywords: $keywords';
 }

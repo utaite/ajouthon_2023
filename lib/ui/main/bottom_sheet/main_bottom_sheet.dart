@@ -36,7 +36,7 @@ class MainBottomSheet extends GetView<MainBottomSheetController> {
                   child: Text(
                     '[${state.keyword}] ${state.title}',
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          color: state.color,
+                          color: UI.colors[state.keyword],
                           fontWeight: FontWeight.w500,
                         ),
                     textAlign: TextAlign.center,
@@ -90,7 +90,7 @@ class MainBottomSheet extends GetView<MainBottomSheetController> {
                     ...state.images.indexed.map(
                       (x) => CircleAvatar(
                         radius: 5,
-                        backgroundColor: rx.value == x.$1 ? state.color : Colors.grey,
+                        backgroundColor: rx.value == x.$1 ? UI.colors[state.keyword] : Colors.grey,
                       ),
                     ),
                   ],
@@ -101,7 +101,7 @@ class MainBottomSheet extends GetView<MainBottomSheetController> {
             FilledButtonTheme(
               data: FilledButtonThemeData(
                 style: FilledButton.styleFrom(
-                  backgroundColor: state.color,
+                  backgroundColor: UI.colors[state.keyword],
                 ).merge(Theme.of(context).filledButtonTheme.style),
               ),
               child: FilledButton(

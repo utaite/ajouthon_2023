@@ -17,13 +17,19 @@ class MainPage extends GetView<MainPageController> {
       child: Scaffold(
         body: SafeArea(
           child: controller.rx(
-            (state) => GoogleMap(
-              initialCameraPosition: const CameraPosition(
-                target: LatLng(37.2843727, 127.0443767),
-                zoom: 17,
-              ),
-              markers: state.markers,
-              myLocationEnabled: true,
+            (state) => Stack(
+              alignment: Alignment.center,
+              fit: StackFit.passthrough,
+              children: [
+                GoogleMap(
+                  initialCameraPosition: const CameraPosition(
+                    target: LatLng(37.2843727, 127.0443767),
+                    zoom: 17,
+                  ),
+                  markers: state.markers,
+                  myLocationEnabled: true,
+                ),
+              ],
             ),
           ),
         ),

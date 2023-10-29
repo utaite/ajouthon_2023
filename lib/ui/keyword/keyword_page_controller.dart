@@ -1,3 +1,4 @@
+import '../../model/route/route_model.dart';
 import '../../module/module.dart';
 import 'keyword_page_model.dart';
 
@@ -48,5 +49,10 @@ class KeywordPageController extends GetController<KeywordPageModel> {
         keywords: state.keywords.where((x) => x != keyword),
       ),
     );
+  }
+
+  Future<void> onPressedNext() async {
+    await setPrefStringList(PrefType.keywords, state.keywords);
+    await RouteModel.main().toNamed();
   }
 }

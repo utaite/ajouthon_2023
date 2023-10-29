@@ -23,15 +23,15 @@ class App extends GetView<AppController> {
     ];
 
     return controller.rx((state) {
-      SystemChrome.setSystemUIOverlayStyle(state.brightness.statusBarStyle);
+      SystemChrome.setSystemUIOverlayStyle(Brightness.light.statusBarStyle);
 
       return GetMaterialApp(
         title: '아주톤 2023',
         debugShowCheckedModeBanner: false,
-        initialRoute: RouteModel.keyword().routes.name,
+        initialRoute: (state.keywords.isEmpty ? RouteModel.keyword() : RouteModel.main()).routes.name,
         getPages: pages,
         unknownRoute: pages.firstOrNull,
-        themeMode: state.brightness.themeMode,
+        themeMode: Brightness.light.themeMode,
         theme: Brightness.light.theme,
         darkTheme: Brightness.dark.theme,
       );

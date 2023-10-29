@@ -105,7 +105,7 @@ class KeywordPage extends GetView<KeywordPageController> {
                     UI.spacer,
                     const SizedBox(height: 30),
                     FilledButton(
-                      onPressed: () {},
+                      onPressed: controller.onPressedNext,
                       child: const Text('다음'),
                     ),
                     const SizedBox(height: 30),
@@ -126,15 +126,28 @@ class KeywordPage extends GetView<KeywordPageController> {
           children: [
             const SizedBox(height: 25),
             Text(
-              '어떤 주제를 좋아하세요?',
-              style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.black, fontWeight: FontWeight.bold),
+              '어떤 키워드를 구독할까요?',
+              style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 20),
-            const Text(
-              '나에게 딱 맞는 모임과 행사를 추천해드려요.',
+            Text(
+              '나에게 중요한 키워드만 입력하세요.',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
             const SizedBox(height: 3),
-            const Text('관심 주제를 탭하여 설정하세요.'),
+            Text(
+              '모든 커뮤니티를 훑어서 알림으로 일깨워줘요.',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+            ),
           ],
         ),
       );

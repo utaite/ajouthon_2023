@@ -23,10 +23,7 @@ class AlertModel extends GetModel {
   );
 
   static final AlertModel _dummy = AlertModel(
-    alertsWithDetails: [
-      ProgramModel.dummy1(),
-      ProgramModel.dummy2(),
-    ],
+    alertsWithDetails: ProgramModel.dummys(),
   );
 
   @override

@@ -94,7 +94,7 @@ void main(List<String> args) async {
   Get.put<AppController>(
     AppController(
       model: AppModel.empty().copyWith(
-        brightness: Brightness.light,
+        keywords: await getPrefStringList(PrefType.keywords),
       ),
     ),
   );

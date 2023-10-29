@@ -1,7 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 enum PrefType {
-  isRegister,
+  keywords,
 }
 
 final Future<SharedPreferences> _pref = SharedPreferences.getInstance();

@@ -9,6 +9,8 @@ class KeywordPageModel extends GetModel {
 
   factory KeywordPageModel.empty() => _empty;
 
+  factory KeywordPageModel.dummy() => _dummy;
+
   final Iterable<String> recommendKeywords;
   final Iterable<String> keywords;
   final String text;
@@ -17,6 +19,10 @@ class KeywordPageModel extends GetModel {
     recommendKeywords: Iterable.empty(),
     keywords: Iterable.empty(),
     text: '',
+  );
+
+  static final KeywordPageModel _dummy = _empty.copyWith(
+    recommendKeywords: UI.colors.keys,
   );
 
   @override

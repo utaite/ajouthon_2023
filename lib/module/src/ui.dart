@@ -19,7 +19,14 @@ final class UI {
   static const BorderRadius borderRadiusTop = BorderRadius.only(topLeft: radius, topRight: radius);
 
   static const Map<String, Color> colors = {
-    '개발': Colors.deepPurple,
     '행사': colorPrimary,
+    '간식': Colors.blueAccent,
+    '축구': Colors.deepOrange,
+    '코딩': Colors.amberAccent,
+    '수령안내': Colors.purpleAccent,
+    '조식': Colors.lightGreen,
+    '기념식': Colors.redAccent,
+    '채용': Colors.blueGrey,
+    '문화행사': Colors.teal,
   };
 }
